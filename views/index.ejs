@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shrinker</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>URL Shrinker</h1>
+
+    <form action="/shortUrls" method="post">
+        <label for="fullUrl">Input URL</label>
+        <input type="url" name="fullUrl" id="fullUrl" required>
+        <button type="submit">Shrink me</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Full URL</th>
+                <th>Short URL</th>
+                <th>Clicks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% shortUrls.forEach(shortUrl => { %>
+                <tr>
+                  <td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+                  <td><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+                  <td><%= shortUrl.clicks %></td>
+                </tr>
+              <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
+

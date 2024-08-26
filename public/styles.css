@@ -1,0 +1,201 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@300;400;600&display=swap');
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffe6e6 25%, #ffcccc 100%);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Adding Wallpaper */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://i.imgur.com/JbkJ7mY.png'); /* Soft, dreamy floral wallpaper */
+    background-size: cover;
+    opacity: 0.8; /* Makes the wallpaper subtly blend into the background */
+    z-index: 0;
+}
+
+/* Glitter Background Animation */
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/glitter.png'), 
+                url('https://www.transparenttextures.com/patterns/subtle-pattern.png'); /* Layered subtle patterns */
+    background-size: cover;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+/* Cloud Decorations */
+body::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%; /* Increased size for more clouds */
+    height: 150%;
+    background: url('https://www.transparenttextures.com/patterns/clouds.png');
+    opacity: 0.4; /* Increased opacity for a dreamier effect */
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* Heading Style */
+h1 {
+    font-family: 'Dancing Script', cursive;
+    color: #800040;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(128, 0, 64, 0.3);
+    z-index: 3;
+}
+
+/* Form Styles */
+form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(255, 153, 153, 0.5);
+    width: 340px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+    position: relative;
+    z-index: 3;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #993366;
+}
+
+input[type="url"] {
+    width: calc(100% - 22px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 1px solid #ffb3b3;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+input[type="url"]:focus {
+    border-color: #ff6699;
+    box-shadow: 0 0 12px rgba(255, 102, 153, 0.5);
+    outline: none;
+}
+
+button {
+    background-color: #ff66b2;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-family: 'Dancing Script', cursive;
+}
+
+button:hover {
+    background-color: #e60073;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 102, 153, 0.5);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Table Styles */
+table {
+    width: 80%;
+    margin-top: 40px;
+    border-collapse: collapse;
+    background: #fff0f5;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(255, 102, 153, 0.5);
+    animation: slideInUp 1.5s ease-in-out;
+    position: relative;
+    z-index: 3;
+}
+
+th, td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid #ffd9e6;
+    transition: background-color 0.3s ease;
+}
+
+th {
+    background-color: #ff66b2;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+tr:hover td {
+    background-color: #ffe6f0;
+}
+
+/* Link Styles */
+a {
+    color: #ff6699;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #e60073;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
